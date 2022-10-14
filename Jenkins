@@ -2,12 +2,14 @@ pipeline {
     agent any
 
     environment {
-        secret = credentials('TEST')
+        NAME = 'ricardo'
+        LASTNAME = 'gonzalez'
     }
+
     stages {
-        stage('Example stage 1') {
+        stage('Build') {
             steps {
-                sh 'echo $secret'
+                sh 'echo $NAME $LASTNAME'
             }
         }
     }
