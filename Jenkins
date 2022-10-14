@@ -20,5 +20,7 @@ pipeline {
          stage('Andrii') {
             steps {
                 echo 'Testing stage....'
+            }
+        }
     }
-}
+}    
