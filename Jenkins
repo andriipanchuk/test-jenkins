@@ -18,8 +18,8 @@ pipeline {
         stage('Andrii-test') {
             steps {
                 echo 'It works wow'
+                    }
                 }
-              }  
             }
         }
     }
