@@ -1,26 +1,14 @@
 pipeline {
     agent any
 
+    environment {
+        secret = credentials('TEST')
+    }
     stages {
-        stage('Build') {
+        stage('Example stage 1') {
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-         stage('Andrii') {
-            steps {
-                echo 'Testing stage....'
+                sh 'echo $secret'
             }
         }
     }
-}    
+}
